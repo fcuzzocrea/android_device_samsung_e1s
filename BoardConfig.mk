@@ -24,5 +24,7 @@ TARGET_SCREEN_DENSITY := 418
 # Modules
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := mcd-panel-s6e3fae_e1s.ko sec-auth-ds28e30.ko
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 # Inherit from common
 include device/samsung/s5e9945/BoardConfigCommon.mk
