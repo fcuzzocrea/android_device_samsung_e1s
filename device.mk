@@ -23,3 +23,8 @@ $(call inherit-product, vendor/samsung/e1s/e1s-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
+
+# WiFi
+PRODUCT_PACKAGES += \
+    WifiOverlay
+
