@@ -17,10 +17,20 @@
 ## Inherit from e1s device
 $(call inherit-product, device/samsung/e1s/device.mk)
 
-# Branding
-PRODUCT_NAME := lineage_e1s
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := e1s
-PRODUCT_MODEL := e1s
+PRODUCT_NAME := lineage_e1s
+PRODUCT_BRAND := samsung
+PRODUCT_MODEL := SM-S921B
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-# GMS
-BUILD_FINGERPRINT := samsung/e1sxxx/e1s:14/UP1A.231005.007/S921BXXU5BYD9:user/release-keys
+# Use the latest approved GMS identifiers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DeviceName=e1s \
+    DeviceProduct=e1s \
+    SystemDevice=e1s \
+    SystemName=e1s \
+    BuildFingerprint=samsung/e1sxxx/e1s:14/UP1A.231005.007/S921BXXS9BYH2:user/release-keys \
+    BuildDesc="e1sxxx-user 14 UP1A.231005.007 S921BXXS9BYH2 release-keys"
+
