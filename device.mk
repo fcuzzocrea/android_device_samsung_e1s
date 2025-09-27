@@ -27,4 +27,3 @@ DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 # WiFi
 PRODUCT_PACKAGES += \
     WifiOverlay
-
