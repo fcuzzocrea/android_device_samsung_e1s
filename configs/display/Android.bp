@@ -1,0 +1,21 @@
+prebuilt_etc {
+    name: "calib_data_colormode0_off.xml",
+    src: "dqe/calib_data_colormode0_off.xml",
+    sub_dir: "dqe",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "calib_data_colormode0_s6e3fae_e1.xml",
+    src: "dqe/calib_data_colormode0_s6e3fae_e1.xml",
+    sub_dir: "dqe",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "calib_data_colormode0_s6e3fae_e1_hdr.xml",
+    src: "dqe/calib_data_colormode0_s6e3fae_e1_hdr.xml",
+    sub_dir: "dqe",
+    vendor: true,
+}
+

@@ -1,27 +1,23 @@
 # All unpinned blobs are from S921BXXS9BYH2
 # Vendor security patch level 2025-08-01
 
-# Audio - Main
+# Audio
 vendor/etc/LVACFS_Calibration.dat
 vendor/etc/LVACFS_ControlParams.txt
-vendor/lib64/librecordalive.so
-
-# Audio - Effects
 vendor/etc/SoundBoosterParam.txt
-vendor/etc/dolby/dax-default.xml
+vendor/lib64/librecordalive.so
 vendor/lib64/soundfx/libaudiosaplus_sec.so
 vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
-vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswspatializer.so
 
-# Camera - HAL
+# Audio (Dolby Atmos)
+vendor/etc/dolby/dax-default.xml
+vendor/lib64/soundfx/libswdap.so
+
+# Camera
 vendor/lib64/hw/camera.s5e9945.so
 vendor/lib64/libeis_interface.so
 vendor/lib64/libvdis_interface.so
-
-# Display - DQE
-vendor/etc/dqe/calib_data_colormode0_s6e3fae_e1.xml
-vendor/etc/dqe/calib_data_colormode0_s6e3fae_e1_hdr.xml
 
 # Firmware
 vendor/firmware/AIE.bin
