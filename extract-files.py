@@ -15,8 +15,11 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'vendor/samsung/s5e9945',
-]
+    'device/samsung/e1s',
+    'hardware/samsung_slsi-linaro/exynos',
+    'hardware/samsung_slsi-linaro/graphics',
+    'hardware/samsung_slsi-linaro/interfaces',
+    'vendor/samsung/s5e9945',]
 
 
 blob_fixups: blob_fixups_user_type = {
