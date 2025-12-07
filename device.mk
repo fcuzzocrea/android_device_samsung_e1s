@@ -21,13 +21,15 @@ PRODUCT_PACKAGES += \
     calib_data_colormode0_s6e3fae_e1_hdr.xml
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
-
+PRODUCT_PACKAGES += \
+    FrameworkResOverlayDevice \
+    SettingsOverlayDevice \
+    SettingsProviderOverlayDevice \
+    SystemUIOverlayDevice
 
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
-
 
 # WiFi
 PRODUCT_PACKAGES += \
