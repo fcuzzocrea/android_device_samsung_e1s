@@ -23,6 +23,12 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
+
+# Soong Namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH)
+
+
 # WiFi
 PRODUCT_PACKAGES += \
     WifiOverlay
