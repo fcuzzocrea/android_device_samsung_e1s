@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2025 The LineageOS Project
+     SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
-    <bool translatable="false" name="config_wifi_fast_bss_transition_enabled">true</bool>
-
-    <!-- Enable ACS (auto channel selection) for softap -->
-    <bool translatable="false" name="config_wifi_softap_acs_supported">false</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has background scan support -->
-    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
-
-    <!-- True if the firmware supports connected MAC randomization -->
-    <bool translatable="false" name="config_wifi_connected_mac_randomization_supported">true</bool>
-
-    <!-- True if the firmware supports p2p MAC randomization -->
-    <bool translatable="false" name="config_wifi_p2p_mac_randomization_supported">true</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
+<resources>
+    <!-- boolean indicating whether the WiFi chipset has 5GHz band support.
+         Note: This config is replacing the config_wifi_dual_band_support
+         since more bands may now be supported (such as 6GHz), the naming dual_band
+         is no longer indicative, and a separate config now exists for each band -->
     <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
 
     <!-- boolean indicating whether the WiFi chipset has 6GHz band support -->
-    <bool translatable="false" name ="config_wifi6ghzSupport">true</bool>
+    <bool translatable="false" name="config_wifi6ghzSupport">true</bool>
+
+    <!-- Indicates that 11ax mode is supported on this device
+           Note that if this flag is set to true, then 11ax is assumed to be supported.
+           However, if it is left to the default value of false, the 11ax support will
+           be checked via NL80211 interface -->
+    <bool translatable="false" name="config_wifi11axSupportOverride">true</bool>
+
+    <!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
+    <bool translatable="false" name="config_wifi_fast_bss_transition_enabled">true</bool>
+
+    <!-- Boolean indicating whether the wifi chipset supports background scanning mechanism.
+         This mechanism allows the host to remain in suspend state and the dongle to actively
+         scan and wake the host when a configured SSID is detected by the dongle. This chipset
+         capability can provide power savings when wifi needs to be always kept on. -->
+    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
+
+    <!-- Wifi driver supports Automatic channel selection (ACS) for softap -->
+    <bool translatable="false" name="config_wifi_softap_acs_supported">false</bool>
 
     <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
     <bool translatable="false" name="config_wifi_softap_sae_supported">true</bool>
-    <!-- Indicates that SAE Hash-to-Element is supported on this device -->
-    <bool translatable="false" name="config_wifiSaeH2eSupported">true</bool>
-    <!-- Enable WPA2 to WPA3 auto-upgrade offload to capable Driver/Firmware -->
-    <bool translatable="false" name="config_wifiSaeUpgradeOffloadEnabled">true</bool>
 
     <!-- Wifi driver supports IEEE80211AC for softap -->
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
@@ -38,18 +40,23 @@
     <!-- Wifi driver supports IEEE80211AX for softap -->
     <bool translatable="false" name="config_wifiSoftapIeee80211axSupported">true</bool>
 
-    <!-- Indicates that 11ax mode is supported on this device
-         Note that if this flag is set to true, then 11ax is assumed to be supported.
-         However, if it is left to the default value of false, the 11ax support will
-         be checked via NL80211 interface -->
-    <bool translatable="false" name="config_wifi11axSupportOverride">true</bool>
-
     <!-- Wifi driver supports 6GHz band for softap when chip support 6GHz -->
     <bool translatable="false" name="config_wifiSoftap6ghzSupported">true</bool>
 
-    <!-- Wifi driver supports Opportunistic Wireless Encryption (OWE)
-         aka Enhanced Open for Soft-AP -->
-    <bool translatable="false" name="config_wifiSoftapOweSupported">true</bool>
+    <!-- Indicates that connected MAC randomization is supported on this device -->
+    <bool translatable="false" name="config_wifi_connected_mac_randomization_supported">true</bool>
+
+    <!-- Indicates that p2p MAC randomization is supported on this device -->
+    <bool translatable="false" name="config_wifi_p2p_mac_randomization_supported">true</bool>
+
+    <!-- Indicates that dynamic country code update in AP mode is supported on this device -->
+    <bool translatable="false" name="config_wifiSoftApDynamicCountryCodeUpdateSupported">true</bool>
+
+    <!-- Do not translate. Default access point SSID used for tethering -->
+    <string translatable="false" name="wifi_tether_configure_ssid_default">Galaxy S24</string>
+
+    <!-- Enable WPA2 to WPA3 auto-upgrade offload to capable Driver/Firmware -->
+    <bool translatable="false" name="config_wifiSaeUpgradeOffloadEnabled">true</bool>
 
     <!-- Enable Make-Before-Break Wifi network switching.
          Note: this is conditional on the device supporting dual concurrent STAs. -->
@@ -63,9 +70,10 @@
          Note: this is conditional on the device supporting dual concurrent STAs. -->
     <bool translatable="false" name="config_wifiMultiStaRestrictedConcurrencyEnabled">true</bool>
 
-    <!-- Indicates that dynamic country code update in AP mode is supported on this device -->
-    <bool translatable="false" name="config_wifiSoftApDynamicCountryCodeUpdateSupported">true</bool>
+    <!-- Indicates that SAE Hash-to-Element is supported on this device -->
+    <bool translatable="false" name="config_wifiSaeH2eSupported">true</bool>
 
-    <!-- Default access point SSID used for tethering -->
-    <string translatable="false"  name="wifi_tether_configure_ssid_default">Galaxy S24</string>
+    <!-- Wifi driver supports Opportunistic Wireless Encryption (OWE)
+         aka Enhanced Open for Soft-AP -->
+    <bool translatable="false" name="config_wifiSoftapOweSupported">true</bool>
 </resources>

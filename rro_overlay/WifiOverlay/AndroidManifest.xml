@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2025 The LineageOS Project
+     SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<!-- e1s specific wifi overlays -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.wifi.resources.e1s"
-    android:versionCode="1"
-    android:versionName="1.0">
-    <application android:hasCode="false" />
-    <overlay
-      android:targetPackage="com.android.wifi.resources"
-      android:targetName="WifiCustomization"
-      android:isStatic="true"
-      android:priority="0"/>
+          package="com.android.wifi.resources.e1s">
+    <overlay android:targetPackage="com.android.wifi.resources"
+             android:isStatic="true"
+             android:priority="0" />
 </manifest>
